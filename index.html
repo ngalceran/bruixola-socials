@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Brúixola de Socials</title>
+<meta name="theme-color" content="#22508F">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Brúixola">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="login" class="login" hidden>
+    <div class="brand">
+      <img src="icon.svg" width="46" height="46" alt="">
+      <div><h1>Brúixola de Socials</h1><div class="sub">3r ESO · Geografia</div></div>
+    </div>
+    <form id="loginform" class="panel">
+      <label class="f">Usuari (correu)<input type="text" id="lg-u" autocomplete="username" inputmode="email" required></label>
+      <label class="f">Clau<input type="password" id="lg-p" autocomplete="current-password" required></label>
+      <button class="btn primary" id="lg-b">Entra</button>
+      <p id="lg-err" class="err" hidden></p>
+      <button type="button" class="btn ghost sm" id="lg-reset" style="align-self:flex-start">He oblidat la clau</button>
+    </form>
+  </div>
+  <div id="app" hidden>
+    <header class="top">
+      <div class="brand">
+        <img src="icon.svg" width="46" height="46" alt="">
+        <div><h1>Brúixola de Socials</h1><div class="sub">3r ESO · Geografia · Construint mons</div></div>
+      </div>
+      <div class="stack" style="gap:4px;align-items:flex-end">
+        <div class="sync" id="sync"><i></i><span>Connectant</span></div>
+        <div class="user"><span id="who"></span><button class="btn ghost sm" id="logout">Surt</button></div>
+      </div>
+    </header>
+    <nav class="tabs" id="tabs">
+      <a href="#avui" data-tab="avui">Avui</a>
+      <a href="#unitats" data-tab="unitats">Unitats</a>
+      <a href="#pla" data-tab="pla">Pla d'estudi</a>
+      <a href="#notes" data-tab="notes">Notes</a>
+    </nav>
+    <main id="main"></main>
+  </div>
+</div>
+<div class="overlay" id="overlay" hidden><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
+<script src="config.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
