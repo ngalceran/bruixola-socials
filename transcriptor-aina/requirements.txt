@@ -1,7 +1,0 @@
-fastapi>=0.115
-uvicorn[standard]>=0.30
-python-multipart>=0.0.9
-faster-whisper>=1.1
-# Opcional, només si TRANSCRIPTOR_MOTOR=transformers:
-# transformers>=4.45
-# torch>=2.3
